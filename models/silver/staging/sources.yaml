@@ -1,0 +1,23 @@
+version: 2
+sources:
+  - name: sap_adw
+    schema: sap_adw
+    database: lighthouse-challenge-13022024
+    tables:
+      - name: salesorderheader
+      - name: salesorderdetail
+      - name: salesterritory
+      - name: customer
+      - name: person
+      - name: salesorderheadersalesreason
+      - name: salesreason
+      - name: store
+      - name: creditcard
+      - name: address
+      - name: stateprovince
+      - name: countryregion
+      - name: product
+      - name: workorder
+      - name: purchaseorderheader
+      - name: purchaseorderdetail
+      - name: vendor
