@@ -1,9 +1,0 @@
-version: 2
-sources:
-  - name: ml
-    schema: ml
-    database: lighthouse-challenge-13022024
-    tables:
-      - name: sales_forecast_linear
-      - name: sales_forecast_logistic
-      - name: sales_forecast_randomforest
