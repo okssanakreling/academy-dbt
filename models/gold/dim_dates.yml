@@ -4,6 +4,22 @@ models:
   - name: dim_dates
     columns:
       - name: sk_date
+        description: Surrogate key of dim_dates
         tests:
           - unique
           - not_null
+      
+      - name: date
+        description: Date of the event in datetime data type
+      
+      - name: year
+        description: Year of the event
+      
+      - name: month
+        description: Month of th event
+      
+      - name: week
+        description: Week of the year of the event
+      
+      - name: day
+        description: Day of the month of the event

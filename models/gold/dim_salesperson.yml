@@ -7,3 +7,21 @@ models:
         tests:
           - unique
           - not_null
+
+      - name: title
+        description: A courtesy title. For example, Mr. or Ms.
+      
+      - name: firstname
+        description: First name of the person.
+      
+      - name: middlename
+        description: Middle name or middle initial of the person.
+      
+      - name: lastname
+        description: Last name of the person.
+      
+      - name: suffix
+        description: Surname suffix. For example, Sr. or Jr.
+      
+      - name: fullname
+        description: Full name of the person.

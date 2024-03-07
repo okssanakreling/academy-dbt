@@ -4,6 +4,10 @@ models:
   - name: dim_payment_method
     columns:
       - name: sk_payment_method
+        description: Surrogate key of dim_payment_method
         tests:
           - unique
           - not_null
+
+      - name: paymentmethod
+        description: Name of the payment method

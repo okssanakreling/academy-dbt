@@ -7,3 +7,15 @@ models:
         tests:
           - unique
           - not_null
+      
+      - name: territoryname
+        description: Sales territory description
+      
+      - name: countrycode
+        description: 	ISO standard country or region code
+      
+      - name: countryname
+        description: Country or region name
+      
+      - name: territorygroup
+        description: Geographic area to which the sales territory belong

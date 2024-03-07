@@ -4,6 +4,10 @@ models:
   - name: dim_sales_types
     columns:
       - name: sk_type
+        description: Surrogate key for dim_sales_types
         tests:
           - unique
           - not_null
+      
+      - name: saletype
+        description: Order placed by salesperson or online by customer

@@ -4,14 +4,26 @@ models:
   - name: fact_sales_details
     columns:
       - name: sk_sales_detail
+        description: Surrogate key for fact_sales_details
         tests:
           - unique
           - not_null
 
       - name: fk_sale
+        description: Foreigner key for fact_sales
         tests:
           - not_null
   
       - name: fk_product
+        description: Foreigner key for dim_products
         tests:
           - not_null
+      
+      - name: orderqty
+        description: Quantity ordered per product
+
+      - name: unitprice
+        description: Selling price of a single product
+
+      - name: unitpricediscount
+        description: Discount amount

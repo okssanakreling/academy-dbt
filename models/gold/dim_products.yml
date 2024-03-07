@@ -4,11 +4,18 @@ models:
   - name: dim_products
     columns:
       - name: sk_product
+        description: Surrogate key for dim_products
         tests:
           - unique
           - not_null
   
       - name: fk_product_subcategory
+        description: Foreigner key for dim_product_subcategories
         tests:
           - not_null
-          
+      
+      - name: productname
+        description: Name of the product
+
+      - name: listprice
+        description: Selling price 

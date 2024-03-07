@@ -4,15 +4,18 @@ models:
   - name: fact_sales_reasons
     columns:
       - name: sk_sales_reason
+        description: Surrogate key for fact_sales_reasons
         tests:
           - unique
           - not_null
 
       - name: fk_sale
+        description: Foreigner key for fact_sales
         tests:
           - not_null
   
       - name: fk_reason
+        description: Foreigner key for dim_reasons
         tests:
           - not_null
           

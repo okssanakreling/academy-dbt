@@ -4,6 +4,10 @@ models:
   - name: dim_sales_status
     columns:
       - name: sk_status
+        description: Surrogate key for dim_sales_status
         tests:
           - unique
           - not_null
+
+      - name: salesstatusname
+        description: Order current status

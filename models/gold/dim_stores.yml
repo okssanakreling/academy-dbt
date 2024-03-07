@@ -4,10 +4,15 @@ models:
   - name: dim_stores
     columns:
       - name: sk_store
+        description: Surrogate key for dim_stores
         tests:
           - unique
           - not_null
 
       - name: fk_territory
+        description: Foreigner key for dim_territories
         tests:
           - not_null
+      
+      - name: storename
+        description: Name of the store

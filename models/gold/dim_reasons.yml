@@ -4,6 +4,13 @@ models:
   - name: dim_reasons
     columns:
       - name: sk_reason
+        description: Surrogate key for dim_reasons
         tests:
           - unique
           - not_null
+
+      - name: reasonname
+        description: Sales reason description
+
+      - name: reasontype
+        description: Category the sales reason belongs to

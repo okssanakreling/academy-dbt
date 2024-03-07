@@ -4,6 +4,10 @@ models:
   - name: dim_product_categories
     columns:
       - name: sk_product_category
+        description: Surrogate key of dim_product_categories
         tests:
           - unique
           - not_null
+      
+      - name: categoryname
+        description: Product category name

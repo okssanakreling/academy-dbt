@@ -1,13 +1,18 @@
 version: 2
 
 models:
-  - name: sk_product_subcategory
+  - name: dim_product_subcategory
     columns:
-      - name: sk_date
+      - name: sk_product_subcategory
+        description: Surrogate key for dim_product_subcategory
         tests:
           - unique
           - not_null
   
       - name: fk_product_category
+        description: Foreigner key for dim_product_category
         tests:
           - not_null
+
+      - name: subcategoryname
+        description: Product sub category name
