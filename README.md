@@ -23,6 +23,11 @@ Em caso a linha de comando do dbt fique com o status de estar sempre carregando,
 - Instale os dbt packages do projeto: `dbt deps`
 - Rode o projeto e veja os resultados no BigQuery: `dbt run`
 
+## Gerando previsões
+
+- Instale as dependências do código pyhon na pasta `./forecast`
+- Rode o arquivo `./src/forecast.py <modelo>` passando como argumento um dos modelos testados linear, logistic, elasticnet, gbr, randomforest
+
 ## Recursos:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
 - Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers

@@ -1,0 +1,3 @@
+pandas-gbq
+tqdm
+scikit-learn
