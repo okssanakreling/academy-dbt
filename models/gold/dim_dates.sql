@@ -36,7 +36,7 @@ with
     , generated_dates as (
         select generate_date_array(
             date(min(min_date))
-            , date(max(max_date))
+            , date_add(date(max(max_date), 90, days)
             , INTERVAL 1 DAY
         ) date_array
         from date_limits
