@@ -3,6 +3,31 @@ with
         select *
         from {{ source("ml", "sales_forecast_linear") }}
     )
+    
+    , stg_product as (
+        select *
+        from {{ ref("stg_product") }}
+    )
+    
+    , stg_store as (
+        select *
+        from {{ ref("stg_store") }}
+    )
+    
+    , stg_sales_territory as (
+        select *
+        from {{ ref("stg_sales_territory") }}
+    )
+    
+    , dim_dates as (
+        select *
+        from {{ ref("dim_dates") }}
+    )
+    
+    , stg_sales_type as (
+        select *
+        from {{ ref("stg_sales_type") }}
+    )
 
     , sales_forecast as (
         select
@@ -14,15 +39,15 @@ with
             , sales_forecast_linear.predicted as orderqty
             , sales_forecast_linear.predicted * stg_product.listprice as sales
         from sales_forecast_linear
-        join staging.stg_product
+        join stg_product
             on stg_product.productid = sales_forecast_linear.productid
-        left join staging.stg_store
+        left join stg_store
             on stg_store.storeid = sales_forecast_linear.storeid
-        join staging.stg_sales_territory
+        join stg_sales_territory
             on stg_sales_territory.territoryid = sales_forecast_linear.territoryid
-        join gold.dim_dates
+        join dim_dates
             on dim_dates.date = CAST(sales_forecast_linear.date AS DATE FORMAT 'YYYYMMDD')
-        join staging.stg_sales_type
+        join stg_sales_type
             on stg_sales_type.onlineorderflag = sales_forecast_linear.onlineorderflag
     )
 
