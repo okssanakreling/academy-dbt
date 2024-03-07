@@ -9,6 +9,11 @@ with
         from {{ ref("stg_customer") }}
     )
 
+    , stg_emailaddress as (
+        select *
+        from {{ ref("stg_emailaddress") }}
+    )
+
     , customer_data as (
         select
             customers.sk_customer as sk_customer
@@ -27,9 +32,12 @@ with
                 ]
                 , ' '
             ) as fullname
+            , stg_emailaddress.emailaddress
         from person
         left join customers
             on customers.personid = person.personid
+        left join stg_emailaddress
+            on stg_emailaddress.personid = person.personid
         where customers.personid is not null
     )
 

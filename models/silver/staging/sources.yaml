@@ -17,7 +17,6 @@ sources:
       - name: stateprovince
       - name: countryregion
       - name: product
-      - name: workorder
-      - name: purchaseorderheader
-      - name: purchaseorderdetail
-      - name: vendor
+      - name: productcategory
+      - name: productsubcategory
+      - name: emailaddress

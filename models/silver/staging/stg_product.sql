@@ -13,6 +13,7 @@ with
             , safetystocklevel
             , productsubcategoryid
             , productmodelid
+            , cast(listprice as decimal) as listprice
             , date(sellstartdate) as sellstartdate
             , date(sellenddate) as sellenddate
         from source_data
