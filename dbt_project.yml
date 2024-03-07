@@ -42,6 +42,10 @@ models:
     gold:
       +schema: gold
       materialized: table
+    
+    agg:
+      +schema: agg
+      materialized: table
 
 seeds:
   adventure_works: # <-- Name of the project. If you renamed your project you have to change this as well
