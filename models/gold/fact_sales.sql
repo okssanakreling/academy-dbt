@@ -44,6 +44,11 @@ with
         from {{ ref("dim_dates") }}
     )
 
+    , stg_person as (
+        select *
+        from {{ ref("stg_person") }}
+    )
+
     , sales_data as (
         select
             stg_sales.sk_sale
@@ -58,6 +63,7 @@ with
             , dim_payment_method.sk_payment_method as fk_payment_method
             , stg_store.sk_store as fk_store
             , stg_territory.sk_territory as fk_territory
+            , stg_person.sk_person as fk_salesperson
         from stg_sales
         left join stg_customer
             on stg_sales.customerid = stg_customer.customerid
@@ -75,6 +81,8 @@ with
             on stg_sales.salestatus = stg_sales_status.salestatus
         left join stg_territory
             on stg_customer.territoryid = stg_territory.territoryid
+        left join stg_person
+            on stg_sales.salespersonid = stg_person.personid
     )
 
 select *
