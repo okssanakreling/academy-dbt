@@ -2,7 +2,7 @@
 
 Repositório para ser utilizado no desafio para a obtenção da certificação de Analytics Engineer by Indicium. Faça o fork deste repositório e o utilize durante o desafio para fazer a insgestão das tabelas do SAP do Adventure Works.
 
-## Instruções
+## Antes de tudo
 
 Todas as tabelas do banco fonte do SAP da Adventure Works serão carregadas como seeds pelo dbt. Os arquivos .csv com os dados já estão na pasta de seeds.
 
@@ -16,6 +16,12 @@ Para carregar uma tabela especifíca utilizem o comando
 
 Em caso a linha de comando do dbt fique com o status de estar sempre carregando, ou, o job do comando `dbt seed` fique rodando indefinitivamente mesmo após as 64 tabelas forem carregadas você precisará reiniciar o terminal. Para isso, clique nos três pontos no canto inferior direito ou no lado direito da linha de comando e escolha a opção `Restart IDE`.
 
+## Como rodar este projeto
+
+- Instale o package de dbt para BigQuery: `pip install dbt-bigquery`
+- Configure suas credenciais para o BigQuery em seu arquivo `profile.yml`
+- Instale os dbt packages do projeto: `dbt deps`
+- Rode o projeto e veja os resultados no BigQuery: `dbt run`
 
 ## Recursos:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
