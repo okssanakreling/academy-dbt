@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: dim_reasons
+    columns:
+      - name: sk_reason
+        tests:
+          - unique
+          - not_null

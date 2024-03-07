@@ -6,7 +6,7 @@ with
 
     , sk_key as (
         select
-            {{ dbt_utils.generate_surrogate_key(["salesorderid"]) }} as sk_sales_reason
+            {{ dbt_utils.generate_surrogate_key(["salesorderid", "salesreasonid"]) }} as sk_sales_reason
             , salesorderid
             , salesreasonid
         from source_data

@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: sk_product_subcategory
+    columns:
+      - name: sk_date
+        tests:
+          - unique
+          - not_null
+  
+      - name: fk_product_category
+        tests:
+          - not_null

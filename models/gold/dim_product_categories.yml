@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: dim_product_categories
+    columns:
+      - name: sk_product_category
+        tests:
+          - unique
+          - not_null

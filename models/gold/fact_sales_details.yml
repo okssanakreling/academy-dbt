@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: fact_sales_details
+    columns:
+      - name: sk_sales_detail
+        tests:
+          - unique
+          - not_null
+
+      - name: fk_sale
+        tests:
+          - not_null
+  
+      - name: fk_product
+        tests:
+          - not_null

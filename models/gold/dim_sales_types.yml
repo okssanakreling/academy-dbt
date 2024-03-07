@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: dim_sales_types
+    columns:
+      - name: sk_type
+        tests:
+          - unique
+          - not_null

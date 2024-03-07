@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: agg_sales_by_region
+    columns:
+      - name: fk_territory
+        tests:
+          - not_null

@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: dim_territories
+    columns:
+      - name: sk_territory
+        tests:
+          - unique
+          - not_null

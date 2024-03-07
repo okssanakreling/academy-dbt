@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dim_products
+    columns:
+      - name: sk_product
+        tests:
+          - unique
+          - not_null
+  
+      - name: fk_product_subcategory
+        tests:
+          - not_null
+          

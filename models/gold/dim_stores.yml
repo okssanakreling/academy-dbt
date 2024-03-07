@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: dim_stores
+    columns:
+      - name: sk_store
+        tests:
+          - unique
+          - not_null
+
+      - name: fk_territory
+        tests:
+          - not_null

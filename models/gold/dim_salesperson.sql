@@ -10,7 +10,7 @@ with
     )
 
     , salesperson_data as (
-        select
+        select distinct
             person.sk_person as sk_salesperson
             , person.title
             , person.firstname

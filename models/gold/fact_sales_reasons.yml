@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: fact_sales_reasons
+    columns:
+      - name: sk_sales_reason
+        tests:
+          - unique
+          - not_null
+
+      - name: fk_sale
+        tests:
+          - not_null
+  
+      - name: fk_reason
+        tests:
+          - not_null
+          

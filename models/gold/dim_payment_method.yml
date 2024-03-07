@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: dim_payment_method
+    columns:
+      - name: sk_payment_method
+        tests:
+          - unique
+          - not_null

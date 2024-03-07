@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: dim_sales_status
+    columns:
+      - name: sk_status
+        tests:
+          - unique
+          - not_null
